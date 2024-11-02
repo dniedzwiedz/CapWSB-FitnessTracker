@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 class UserMapper {
 
+    UserSimple toUserSimple(User user){
+        return new UserSimple(user.getId(), user.getFirstName(), user.getLastName());
+    }
     UserDto toDto(User user) {
         return new UserDto(user.getId(),
                            user.getFirstName(),
@@ -20,6 +23,10 @@ class UserMapper {
                         userDto.lastName(),
                         userDto.birthdate(),
                         userDto.email());
+    }
+
+    static UserEmailSimpleDto toEmailSimpleDto(User user) {
+        return new UserEmailSimpleDto(user.getId(), user.getEmail());
     }
 
 }

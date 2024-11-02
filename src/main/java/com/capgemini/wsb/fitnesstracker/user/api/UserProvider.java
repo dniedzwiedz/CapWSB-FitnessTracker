@@ -30,4 +30,7 @@ public interface UserProvider {
      */
     List<User> findAllUsers();
 
+    List<User> getUserByEmailIgnoreCase(String email);
+
+    List<User> findOlderThan(String birthDate);
 }
