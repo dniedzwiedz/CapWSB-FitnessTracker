@@ -9,6 +9,7 @@ class UserMapper {
     UserSimple toUserSimple(User user){
         return new UserSimple(user.getId(), user.getFirstName(), user.getLastName());
     }
+
     UserDto toDto(User user) {
         return new UserDto(user.getId(),
                            user.getFirstName(),

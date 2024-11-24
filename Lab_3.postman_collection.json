@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "49bb5c27-b32b-4639-a79c-a526c6e2f64f",
+		"name": "Lab_3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39449690"
+	},
+	"item": [
+		{
+			"name": "Zad_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zad_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zad_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/finished/2024-01-18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"finished",
+						"2024-01-18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zad_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/activityType?activityType=RUNNING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"activityType"
+					],
+					"query": [
+						{
+							"key": "activityType",
+							"value": "RUNNING"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zad_5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"3\",\r\n    \"startTime\": \"2024-01-19T07:00:00\",\r\n    \"endTime\": \"2024-01-19T08:30:00\",\r\n    \"activityType\": \"RUNNING\",\r\n    \"distance\": 20.1,\r\n    \"averageSpeed\": 2.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zad_6",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"2\",\r\n    \"startTime\": \"2024-01-19T07:00:00\",\r\n    \"endTime\": \"2024-01-19T08:30:00\",\r\n    \"activityType\": \"RUNNING\",\r\n    \"distance\": 20.1,\r\n    \"averageSpeed\": 2.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

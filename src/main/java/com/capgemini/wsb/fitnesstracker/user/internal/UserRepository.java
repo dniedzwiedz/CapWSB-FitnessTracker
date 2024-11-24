@@ -25,12 +25,22 @@ interface UserRepository extends JpaRepository<User, Long> {
 
    }
 
+    /**
+     * Szukanie po fragmencie emaila
+     * @param emailFragment
+     * @return
+     */
     default List<User> findByEmailFragmentIgnoreCase(String emailFragment) {
         return findAll().stream()
                 .filter(user -> user.getEmail().toLowerCase().contains(emailFragment.toLowerCase()))
                 .toList();
     }
 
+    /**
+     * Wyszukiwanie starszych niż wybrana data
+     * @param birthDate
+     * @return
+     */
     default List<User> findOlderThan(String birthDate) {
         return findAll().stream()
                 .filter(user -> user.getBirthdate().isBefore(LocalDate.parse(birthDate)))
